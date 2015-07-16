@@ -1,0 +1,242 @@
+/*-------------
+FLAIRS
+
+.flair-guide,
+.flair-unresolved,
+.flair-resolved,
+.flair-tip,
+.flair-meta,
+.flair-advice,
+.flair-request
+-------------*/
+
+.flair, .submission a.title::before {
+    display:    inline-block;
+    min-width:  9em;
+    text-align: center;
+    background: #DDD;
+    border:     2px solid #BBB;
+    color:      #666;
+}
+    .light .flair-guide {
+        background:   #6591EF;
+        border-color: #3F69C2;
+        color:        #F9FBFF;
+    }
+    .dark .flair-guide {
+        background:   #3A5CA4;
+        border-color: #2F4B88;
+        color:        #F2F6FF;
+    }
+    .light .flair-unresolved {
+        background:   #E45E5E;
+        border-color: #C84848;
+        color:        #FEEBEB;
+    }
+    .dark .flair-unresolved {
+        background:   #B53F3F;
+        border-color: #7D2C2C;
+        color:        #FEE;
+    }
+    .light .flair-resolved {
+        background:   #71EA84;
+        border-color: #4CC65F;
+        color:        #2C7437;
+    }
+    .dark .flair-resolved {
+        background:   #3A8745;
+        border-color: #215529;
+        color:        #EBFFEE;
+    }
+    .light .flair-tip {
+        background:   #61B6EA;
+        border-color: #4493C4;
+        color:        #EEF9FF;
+    }
+    .dark .flair-tip {
+        background:   #3E8BBB;
+        border-color: #2E6689;
+        color:        #EDF8FF;
+    }
+    .light .flair-meta {
+        /* defaults */
+    }
+    .dark .flair-meta {
+        background:   #7A7A7A;
+        border-color: #5E5E5E;
+        color:        #F2F2F2;
+    }
+    .light .flair-advice {
+        background:   #A260E3;
+        border-color: #7D40B8;
+        color:        #F6EDFF;
+    }
+    .dark .flair-advice {
+        background:   #6B369D;
+        border-color: #4C2571;
+        color:        #F7EEFF;
+    }
+    .light .flair-request {
+        background:   #FFBC65;
+        border-color: #D79E55;
+        color:        #7B592E;
+    }
+    .dark .flair-request {
+        background:   #BC8339;
+        border-color: #8E6127;
+        color:        #FFF7ED;
+    }
+
+.flair:empty {
+    /* fix for unflaired discussion pages */
+    display: none; }
+
+/* “Flair” for new posts */
+
+.submission a.title::before {
+    content:        "New";
+    font-size:      x-small;
+    line-height:    150%;
+    margin:         -1px 8px 0 0;
+    padding:        2px 4px;
+    vertical-align: middle;
+    border-radius:  2px;
+    font-weight:    normal;
+    background:     #E45E5E;
+    border-color:   #C84848;
+    color:          #FEEBEB;
+}
+
+.dark .submission a.title::before {
+    background:   #B53F3F;
+    border-color: #7D2C2C;
+    color:        #FEE;
+}
+
+.submission span ~ a.title::before {
+    content: none;
+    display: none; }
+
+/* sidebar subscriber terms */
+.subscribers .word { display: none; }
+.subscribers .number:after { content: " sub tweakers"; }
+.users-online .word { display: none; }
+.users-online .number:after { content: " sub tweakers present"; }
+
+/* sidebar heading boxes */
+.side .md h5 {
+    border-radius: 5px 5px 0 0;
+    font-size:     100%;
+    font-style:    normal;
+    line-height:   1.4;
+    padding:       5px;
+    text-align:    center;
+    margin:        10px 0 0;
+}
+.light .side .md h5 {
+    background:    #BDAEFF;
+    background:    -webkit-linear-gradient(top, #D2C8FF, #BDAEFF);
+    background:       -moz-linear-gradient(top, #D2C8FF, #BDAEFF);
+    background:        -ms-linear-gradient(top, #D2C8FF, #BDAEFF);
+    background:         -o-linear-gradient(top, #D2C8FF, #BDAEFF);
+    border:        1px solid #A693FF;
+    color:         #382D6C;
+}
+.dark .side .md h5 {
+    background:    #65599A;
+    background:    -webkit-linear-gradient(top, #7669B0, #65599A);
+    background:       -moz-linear-gradient(top, #7669B0, #65599A);
+    background:        -ms-linear-gradient(top, #7669B0, #65599A);
+    background:         -o-linear-gradient(top, #7669B0, #65599A);
+    border:        1px solid #574B8E;
+    color:         #F2EFFF;
+}
+.side .md h5 + blockquote {
+    background:    none;
+    margin:        0 0 10px;
+}
+.light .side .md h5 + blockquote {
+    border:        1px solid #A693FF;
+    border-radius: 0 0 5px 5px;
+}
+.dark .side .md h5 + blockquote {
+    border:        1px solid #574B8E;
+    border-radius: 0 0 5px 5px;
+}
+    .side .md h5 + blockquote > blockquote {
+        font-size:   100%;
+        font-weight: normal;
+        line-height: 1.4;
+        margin:      10px -8px;
+        padding:     5px;
+        position:    relative;
+    }
+    .light .side .md h5 + blockquote > blockquote {
+        background:   #E0D9FF;
+        border-width: 1px 0;
+        border-style: solid none;
+        border-color: #BEB0FF;
+        color:        #403962;
+    }
+    .dark .side .md h5 + blockquote > blockquote {
+        background:   #65599A;
+        border-width: 1px 0;
+        border-style: solid none;
+        border-color: #574B8E;
+        color:        #F2EFFF;
+    }
+        .side .md h5 + blockquote > blockquote p:first-child {
+            float:       left;
+            font-size:   18px;
+            line-height: 1;
+            margin:      17px 0 0 2px;
+            position:    absolute;
+        }
+        .light .side .md h5 + blockquote > blockquote p:first-child { color: #8777D0; }
+        .dark .side .md h5 + blockquote > blockquote p:first-child { color: #AC9EED; }
+        .side .md h5 + blockquote > blockquote p:last-child {
+            margin-left: 20px;
+            min-height: 40px;
+        }
+    .side .md h5 + blockquote ol,
+    .side .md h5 + blockquote ul { margin: 5px 0 5px 18px; }
+
+
+/* Added this to make flair selection easier -teh_sauce_guy */
+#linkFlairSelectModal .modal-body .btn-default{
+margin-bottom:1px;
+display:block;
+}
+#linkFlairSelectModal .modal-body .btn-default:nth-child(3){ /*Guide*/
+background:#6591EF;
+border:1px solid #3F69C2;
+color:#FFF;
+}
+#linkFlairSelectModal .modal-body .btn-default:nth-child(4){ /*Tip*/
+background:#61B6EA;
+border:1px solid #4493C4;
+color:#FFF;
+}
+#linkFlairSelectModal .modal-body .btn-default:nth-child(5){ /*Resolved*/
+background:#71EA84;
+border:1px solid #4CC65F;
+}
+#linkFlairSelectModal .modal-body .btn-default:nth-child(6){ /*Unresolved*/
+background:#E45E5E;
+border:1px solid #C84848;
+color:#FFF;
+}
+#linkFlairSelectModal .modal-body .btn-default:nth-child(7){ /*Meta*/
+background:#DDD;
+border:1px solid #BBB;
+}
+#linkFlairSelectModal .modal-body .btn-default:nth-child(8){ /*Advice*/
+background:#A260E3;
+border:1px solid #7D40B8;
+color:#FFF;
+}
+#linkFlairSelectModal .modal-body .btn-default:nth-child(9){ /*Request*/
+background:#FFBC65;
+border:1px solid #D79E55;
+}
+/*End easy flair selectorator*/
