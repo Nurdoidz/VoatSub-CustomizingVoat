@@ -1,2 +1,2 @@
 # VoatSub-CustomizingVoat
-Sidebar text, announcements, CSS, etc. for /v/CustomizingVoat
+This repository hosts the source files for [/v/CustomizingVoat](https://voat.co/v/customizingvoat).
